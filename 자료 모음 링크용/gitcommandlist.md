@@ -17,7 +17,7 @@
       - Changes to be committed : add에서 commit된 파일 들의 명단을 보여줌
       - ![](/image/git%20status2.PNG)
       - Noting to commit, working tree clean : 변경 사항 없음.
-      
+      - ![](/image/git%20status3.PNG)
       <br>
       <br>
 
