@@ -13,11 +13,14 @@
     - 파일의 상태를 알 수 있음.
       - Untracked Files : 버전으로 관리된 적 없는 파일 상태(보통 새롭게 만든 경우)
       - Changes not staged for commit : 기존 파일이 변경이 되었으나 staging area에 올라가지 않은 상태.
-      - ![](/image/git%20status.PNG)
+        ![](/image/git%20status.PNG)
+      
       - Changes to be committed : add에서 commit된 파일 들의 명단을 보여줌
-      - ![](/image/git%20status2.PNG)
+      
+         ![](/image/git%20status2.PNG)
+      
       - Noting to commit, working tree clean : 변경 사항 없음.
-      - ![](/image/git%20status3.PNG)
+         ![](/image/git%20status3.PNG)
       <br>
       <br>
 
