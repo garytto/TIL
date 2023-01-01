@@ -34,12 +34,16 @@
   <br>
 
 - `git restore --staged 파일명.확장자` : add 명령어를 통해 staging area에 올린 파일을 치울때 사용.<br>
-  - ![](/image/git%20restore.PNG)
+  ![](/image/git%20restore.PNG)
 
 - `git commit -m '주석에 넣을 내용` : staging area에 올라가 있는 파일들을 버전화(포장) 시키는 기능.
+  ![](/image/git%20commit.PNG)
 
+- `git push '원격저장소이름' '브랜치 명칭'` : 원격 저장소로 로컬 저장소의 최근 변경 사항(버전 업된 커밋 내용)을 올림 (로컬 저장소의 내용을 밀어 넣음. ***push***)
+  ![](/image/git%20push.PNG)
 
-
+- `git pull '원격저장소이름' '브랜치 명칭'` : 원격 저장소로부터 변경된 내역을 받아와서 이력을 병합함.
+  ![]
 
 
 
