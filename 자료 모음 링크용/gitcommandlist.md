@@ -34,6 +34,12 @@
   <br>
 
 - `git restore --staged 파일명.확장자` : add 명령어를 통해 staging area에 올린 파일을 치울때 사용.<br>
+  - ![](/image/git%20restore.PNG)
+
+- `git commit -m '주석에 넣을 내용` : staging area에 올라가 있는 파일들을 버전화(포장) 시키는 기능.
+
+
+
 
 
 
