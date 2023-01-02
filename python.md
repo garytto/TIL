@@ -52,12 +52,12 @@
     - 딕셔너리(Dictionary)
 
 ### 수치형
-  - 정수
+  - **정수(`int`)**
     - 모든 정수의 타입은 int
     - 매우 큰 수를 나타낼 떄 오버플로우가 발생하지 않음
       - 오버플로우(overflow) : 데이터 타입별로 사용할 수 있는 메모리의 크기를 넘어서는 상황
       - 임의 정밀도 산술(Arbitrary precision arithmetic)을 통해 고정된 형태의 메모리가 아닌 가용 메모리들을 활용하여 모든 수 표현에 활용
-  - 실수
+  - **실수(`float`)**
     - 정수가 아닌 모든 실수는 float 타입
     - 부동소수점
       - 실수를 컴퓨터가 표현하는 방법 -2진수(비트)로 숫자를 표현
@@ -73,6 +73,18 @@
             import math
             math.isclose(a, b)
             ```
+  - **복소수(`complex`)**
+    - 실수부와 허수부로 구성된 복소수는 모두 complex 타입.
+      - 허수부를 j로 표현
+      ```python
+      a = 3+4j
+      type(a)
+      # <class 'complex'>
+      a.real
+      # 3.0
+      a.img
+      # 4.0
+      ```
 ### 불린형
   - True / False 값을 가진 타입은 bool
     - True는 1, False는 0에 해당함.
@@ -83,11 +95,31 @@
 ### 연산자
   - 산술 연산자(Arithimetic Operator)
     - 기본적인 사칙연산 및 수식 계산
-  - 비교 연산자(Comparison operator)
-    - 값을 비교하며, True / Flase 값을 리턴함.
+  ![](/image/Operator.PNG)
+  - 복합 연산자(In-place Operator)
+    - 연산과 할당이 동시에 진행된다.
+  ![](/image/In-place%20operator.PNG)
 
-### 컨테이너
-- 컨테이너란 여러 개의 값을 담을 수 있는 것(객체)으로, ㅋ서로 다른 자료형을 저장할 수 있음
+  - 비교 연산자(Comparison Operator)
+    - 값을 비교하며, True / Flase 값을 리턴함.
+  ![](/image/Comparison%20operator.PNG)
+
+  - 논리 연산자(Logical Operator)
+    - 논리식을 판단, 참(True)와 거짓(False)를 반환함.
+  ![](/image/Logical%20Operator.PNG)
+      
+      - and : 모두 참인 경우 참, 그렇지 않으면 거짓 
+      ![](/image/and.PNG)
+      
+      - or : 둘 중 하나만 참일경우 참, 그 외는 거짓
+      ![](/image/or.PNG)
+
+      - not : 참/거짓의 반대 결과.
+      ![](/image/not.PNG)
+
+
+## 컨테이너
+- 컨테이너란 여러 개의 값을 담을 수 있는 것(객체)으로, 서로 다른 자료형을 저장할 수 있음
 - 컨테이너의 분류
   - 순서가 있는 데이터(Ordered) vs 순서가 없는 데이터 (Unordered)
   - 순서가 있다 != 정렬 되어 있다.
@@ -96,7 +128,46 @@
     - 리스트(mutable) : 변경 가능한 값들의 나열
     - 튜플(immutable) : 변경 불가능한 값들의 나열
     - 레인지(immutable) : 숫자의 나열
-  - 컬렉션 /비시퀀스
+  
+- 컬렉션 /비시퀀스
     - 세트(mutable) : 유일한 값들의 모음
     - 딕셔너리 (mutalbe) : 키 - 값들의 모음
 
+### **시퀀스형 컨테이너**
+ - 시퀀스형 주요 공통 연산자
+  ![](/image/Sequence%20Container.PNG)
+
+ - **문자열(String Type)**
+   - 모든 문자는 str 타입
+   - 문자열은 작은 따옴표(')나 큰 따옴표를(")를 활용하여 표기
+    - 문자열을 묶을 때 동일한 문장부호를 활용
+    - PEP8에서는 소스코드 내에서 하나의 문장부호를 선택하여 유지하도록 함
+  ```python
+  print('hello')
+  # hello
+  print(type('hello'))
+  # <class 'str'>
+  ```
+
+  - **중첩따옴표(Nested Quotes)**  
+    - 따옴표 안에 따옴표를 표현할 경우
+      - 작은 따옴표가 들어 있는 경우는 큰 따옴표로 문자열 생성
+      - 큰 따옴표가 들어 있는 경우는 작은 따옴표로 문자열 생성
+    ```python
+    print("문자열 안에 '작은 따옴표'를 사용하려면 큰 따옴표로 묶는다.")
+    print('문자열 안에 "큰 따옴표"를 사용하려면 작은 따옴표로 묶는다.)
+    ```
+
+  - **삼중따옴표(Triple Quotes)**
+    - 작은 따옴표나 큰 따옴표를 삼중으로 사용
+      - 따옴표 안에 따옴표를 넣을 때,
+      - 여러줄을 나눠 입력할 떄 편리
+      ```python
+      print('''문자열 안에 '작은 따옴표'나 "큰 따옴표"를 사용할 수 있고 여러 줄을 사용할 때도 편리하다.''')
+      ```
+
+  - **인덱싱**
+    - 인덱스를 통해 특정 값에 접근할 수 있음 (0 ~ )
+    - 인덱스는 기본적으로는 0애서 부터 시작합니다.
+    - s[1] => 'b'
+  ![](/image/index.PNG)
