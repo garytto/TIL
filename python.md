@@ -171,3 +171,65 @@
     - 인덱스는 기본적으로는 0애서 부터 시작합니다.
     - s[1] => 'b'
   ![](/image/index.PNG)
+
+  - **슬라이싱(Slicing)**
+    - 슬라이싱의 구조는 기본적으로 `a[start:end:step]`과 같이 구성 되어 있다.
+      - 앞의 0은 시작점을 의미하며 뒷 부분은 종착점(7번째까지)을 의미한다.
+      - a[start, end] = end의 값은 포함되지 않는다.(해당 값의 직전까지 포함.)
+      - a[start, end, step] = start 부터 end 까지의 값 중 step 만큼 뛰어 넘겨서 나타낸다.<br>
+      만약 step 값이 정수라면 좌에서 우측으로 진행, 음수라면 우측에서 좌로 진행한다.
+        * 하기 예시를 확인해보자.
+      ```python
+      s = "12345678"
+
+      print(s[0:7]) #1234567 0 번째(1)에서부터 7번째까지의 값이 출력, 7번째 값은 포함X
+      print(s[1:]) #2345678 1 번째(2)에서부터 모든 값이 출력
+      print(s[:4]) #1234 4 번째까지의 모든 값이 출력 , 4번째 값은 포함 x
+      print(s[-4:]) #5678 뒤에서 4번째 값 부터 이후 모든 값이 출력
+      print(s[-8:]) #12345678 뒤에서 8번째 값(1) 부터 모든 값이 출력
+      print(s[0:8:2]) #1357 0~ 8 번째 값을 2칸씩 띄어서 출력
+      print(s[ : :2]) #1357 시작 부터 처음 값을 2칸씩 띄어서 출력
+      print(s[-8: :3]) #147 -8(1) 번째 부터 끝 범위 내 값 중 3칸씩 띄어서 출력 
+      print(s[ : :-1]) #87654321 역행해서 출력
+      ```
+        - 참고 사진
+      ![](/image/slice1.PNG)
+      ![](/image/slice2.PNG)
+
+   - **기타**
+     - 결합(Conatenation)
+     ```python
+     'hello, '+ 'python!'
+     # 'hello, python!'
+     ```
+     - 반복 (Repetition)
+     ```python
+     'hello' * 3
+     # 'hellohellohello'
+     ```
+     - 포함 (Membership)
+     ```python
+     print('a' in 'apple')
+      # True
+     print('appb' in 'apple')
+      # False
+     print('app' in 'apple')
+      # True
+     print('b' in 'apple')
+      # false
+     print('l' in 'apple')
+      # True
+     ```
+  - **Escape sequence**
+    - 문자열 내에서 특정 문자나 조작을 위해서 역슬래시(`\`)를 활용하여 구분 <br>
+      ![](/image/escape.PNG)
+      ```python
+      print('철수 \'안녕\'')
+      # 철수 '안녕'
+      print('이 다음은 엔터.\n 그리고 탭\t 탭')
+      # 이 다음은 엔터.
+      # 그리고 탭   탭
+      ```
+  - 문자열 특징
+    - 문자열은 Immutable(변경 불가능)하며, Iterable(반복 가능하다.)
+      - 추후 수업에서 배울 예정 배우면 해당 내용 추가하겠음!
